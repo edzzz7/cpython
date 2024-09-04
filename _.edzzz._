@@ -1,0 +1,15 @@
+import random
+import string
+
+def generate_wifi_password(length=16):
+    # Define possible characters
+    characters = string.ascii_letters + string.digits + string.punctuation
+    
+    # Randomly select characters from the list
+    password = ''.join(random.choice(characters) for i in range(length))
+    
+    return password
+
+# Generate and print a secure Wi-Fi password
+wifi_password = generate_wifi_password()
+print("Your secure Wi-Fi password is:", wifi_password)
